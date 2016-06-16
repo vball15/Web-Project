@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Team</title>
+<script type="text/javascript" src="modernizr.custom.38894.js"></script>
+<!--<script src="angularjs.js"></script>-->
+<link href="team.css" rel="stylesheet">
+<script>
+if(window.FileReader && Modernizr.draganddrop){
+
+	function allowDrop(ev){
+		ev.preventDefault();
+	}
+	
+	function drag(ev){
+		ev.dataTransfer.setData("Text",ev.target.id);
+	}
+
+	function drop(ev){
+		ev.preventDefault();
+		var data=ev.dataTransfer.getData("Text");
+		ev.target.appendChild(document.getElementById(data));
+	}
+} else {
+	document.write('Sorry, your browser does not support drag and drop');
+}
+</script>
+</head>
+<header>FIFA 16 FUT Draft Designer</header>
+<body>
+	<div id="team">
+		<div id="divST" ondrop="drop(event)" ondragover="allowDrop(event)"></div><br><br><br>
+		<div id="divLW" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+		<div id="divRW" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+		<div id="divLM" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+		<div id="divCAM" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+		<div id="divRM" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+		<div id="divLB" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+		<div id="divLCB" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+		<div id="divRCB" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+		<div id="divRB" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+		<div id="divGK" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	</div><!-- End div "team" -->
+	<br>
+	<div id="players">
+		<p>Start by Selecting a captain</p>
+		<img id="drag1" src="totslewa.png" draggable="true" ondragstart="drag(event)">
+		<img id="drag2" src="totskane.png" draggable="true" ondragstart="drag(event)">
+		<img id="drag3" src="totsibra.png" draggable="true" ondragstart="drag(event)">
+		<img id="drag4" src="totsneymar.png" draggable="true" ondragstart="drag(event)">
+		<img id="drag5" src="totshummels.png" draggable="true" ondragstart="drag(event)">
+	</div><!-- End div "players"-->
+</body>
+</html>

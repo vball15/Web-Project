@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sign In</title>
+</head>
+<script src="angularjs.js"></script>
+<script type="text/javascript">
+function initStorage(){
+	function saveName(){
+		var name = document.getElementById('username');
+		localStorage.setItem('username',username.value);
+	}
+	
+	function saveEmail(){
+		var email = document.getElementById('email');
+		var email = document.getElementById('emailvalid');
+		
+		localStorage.setItem('email',email.value);
+		localStorage.setItem('emailvalid',emailvalid.value);
+	}
+	
+	function savePassword(){
+		var password1 = document.getElementById('password');
+		var password2 = document.getElementById('passwordverify');
+		localStorage.setItem('password',password.value);
+		localStorage.setItem('passwordverify',passwordverify.value);
+	}
+	
+	//Run functions
+	saveName();
+	saveEmail();
+	savePassword();
+}
+
+function displayName(){	
+	if(localStorage.getItem('username') == null){
+		document.write('<p></p>');
+	} else {
+		document.write('<p><strong>Welcome, </strong> '+localStorage.getItem('username')+'</p> ');
+	}
+}
+	
+function showText(){
+	if(localStorage.getItem('email') == null){
+		document.write('<p>Please enter your email address</p>');
+	} else {
+		document.write('<p><strong>Subscribed Email:</strong> '+localStorage.getItem('email')+'</p> ');
+	}
+}
+
+function displayerUserEmail(){
+	if(localStorage.getItem('emailvalid') == null){
+		document.write('<p>Please enter your email address</p>');
+	} else {
+		document.write('<p><strong>Subscribed Email:</strong> '+localStorage.getItem('emailvalid')+'</p> ');
+	}
+}
+
+function clearAll(){
+	localStorage.clear();   
+	window.location.reload()
+}
+
+function passwordVerify(){
+		if(localStorage.getItem('password') != localStorage.getItem('passwordverify')){
+			document.write('Error: Passwords do not match');
+			/*
+			document.write(' ' + localStorage.getItem('password') + ' ');
+			document.write(localStorage.getItem('passwordverify'));
+			*/
+		}
+		else{
+			/*
+			document.write('Passwords match');
+			document.write(' ' +localStorage.getItem('password') + ' ');
+			document.write(localStorage.getItem('passwordverify'));
+			*/
+		}
+	}
+
+function login() {
+		var emaillogin = document.getElementById("emailvalid");
+		var passwordlogin = document.getElementById("password-user");
+		var error = document.getElementById("error");
+		
+		if(emaillogin.value == '') {
+			error.style.display = "block";
+			emaillogin.style.border = "1px solid red";
+			return false;
+		}
+		else if(passwordlogin.value == '') {
+			error.style.display = "block";
+			passwordlogin.style.border = "1px solid red";
+			return false;
+		}	
+	}
+</script>
+<link href="signin.css" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<div>
+	<header>FIFA 16 FUT Draft Designer</header>
+	
+	<div id="display-name">
+		<script type="text/javascript">
+			displayName();
+		</script>
+	</div>
+	<body>
+	<section id="signin" onsubmit="initStorage()">
+	<div id="error" style="color: red; display: block;">
+    	Please provide missing information in the red fields.<br><br>
+    </div>
+		<p>
+			<label for="email">Email: </label>
+			<input type="email" id="emailvalid" name="email">
+		</p>
+		<p>
+			<label for="password">Password: </label>
+			<input type="password" id="password-user" name="password">
+		</p>
+		<p>
+			<a href="webpage.html">
+				<button id="login">Log In</button>
+			</a>
+		<script type="text/javascript">
+			login();
+		</script>
+		</p>
+	</section>
+	
+	
+	<section id="start">
+		<p>Get started today!</p>
+		<img src="fut16.png">
+	</section>
+	
+	<form id="signup" action="webpage.html" onsubmit="initStorage()">
+		<p>Don't have an account? Sign up now</p>
+		<p>
+			<label for="PSN">PSN or XBOX Name: </label>
+			<input type="text" id="username" color="black" name="username">
+		</p>
+		<p>
+			<label for="email">Email: </label>
+			<input type="email" id="email" name="email">
+		</p>
+		<p>
+			<label for="password">Password: </label>
+			<input type="password" id="password" name="password">
+		</p>
+		<p>
+			<label for="passwordverify">Re-Enter Password: </label>
+			<input type="password" id="passwordverify" name="passwordverify">
+		</p>
+		<script type="text/javascript">
+			passwordVerify();
+		</script>
+		<p>
+			<a href="webpage.html">
+				<button id="signupbttn">Sign Up</button>
+			</a>
+		</p>
+	</form>
+</div>
+</body>
+</html>

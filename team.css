@@ -1,0 +1,215 @@
+html{
+	text-rendering: optimizeLegibility;
+}
+
+body{
+	/*font-family: Open Sans,Verdana,Arial,sans-serif;*/
+	font-family: "Segoe UI"; 
+	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(stadium3.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+header{
+	height: 120px;
+	/*
+	background-image: url('fifa16.png');
+	background-size: 2000px 500px;
+	background-position: top;
+	background-repeat: no-repeat;
+	*/
+	padding-top: 15px;
+	position: relative;
+	display: block;
+	text-align: center;
+	font-size: 48px;
+	color: #FFFFFF;
+	font-weight: 250;
+	text-align: center;	
+}
+
+#divST{
+	width:140px;
+	height:190px;
+	background-image: url(totsblank.png);
+	background-size: 120px 190px;
+	background-position:top;
+	background-repeat: no-repeat;
+	/*border:1px solid #aaaaaa;*/
+	float:left;
+	color:white;
+	text-align: center;
+	margin-left:200px;
+}
+
+#divLW{
+	width:140px;
+	height:190px;
+	background-image: url(totsblank.png);
+	background-size: 120px 190px;
+	background-position:top;
+	background-repeat: no-repeat;
+	/*border:1px solid #aaaaaa;*/
+	float:left;
+	color:white;
+	text-align: center;
+	margin-left: -375px;
+}
+
+#divRW{
+	width:140px;
+	height:190px;
+	background-image: url(totsblank.png);
+	background-size: 120px 190px;
+	background-position:top;
+	background-repeat: no-repeat;
+	/*border:1px solid #aaaaaa;*/
+	float:left;
+	color:white;
+	text-align: center;
+	margin-left: 100px;
+}
+
+#divRM{
+	width:140px;
+	height:190px;
+	background-image: url(totsblank.png);
+	background-size: 120px 190px;
+	background-position:top;
+	background-repeat: no-repeat;
+	/*border:1px solid #aaaaaa;*/
+	float:left;
+	color:white;
+	text-align: center;
+	margin-right: 10px;
+}
+
+#divCAM{
+	width:140px;
+	height:190px;
+	background-image: url(totsblank.png);
+	background-size: 120px 190px;
+	background-position:top;
+	background-repeat: no-repeat;
+	/*border:1px solid #aaaaaa;*/
+	float:left;
+	color:white;
+	text-align: center;
+	margin-right: 75px;
+}
+
+#divLM{
+	width:140px;
+	height:190px;
+	background-image: url(totsblank.png);
+	background-size: 120px 190px;
+	background-position:top;
+	background-repeat: no-repeat;
+	/*border:1px solid #aaaaaa;*/
+	float:left;
+	color:white;
+	text-align: center;
+	margin-right: 75px;
+	margin-left: -12px;
+}
+
+#divLB{
+	width:140px;
+	height:190px;
+	background-image: url(totsblank.png);
+	background-size: 120px 190px;
+	background-position:top;
+	background-repeat: no-repeat;
+	/*border:1px solid #aaaaaa;*/
+	float:left;
+	color:white;
+	text-align: center;
+	margin-left: -55px;
+
+}
+
+#divRB{
+	width:140px;
+	height:190px;
+	background-image: url(totsblank.png);
+	background-size: 120px 190px;
+	background-position:top;
+	background-repeat: no-repeat;
+	/*border:1px solid #aaaaaa;*/
+	float:left;
+	color:white;
+	text-align: center;
+	margin-right: 50px;
+	margin-left: 15px;
+}
+
+#divRCB{
+	width:140px;
+	height:190px;
+	background-image: url(totsblank.png);
+	background-size: 120px 190px;
+	background-position:top;
+	background-repeat: no-repeat;
+	/*border:1px solid #aaaaaa;*/
+	float:left;
+	color:white;
+	text-align: center;
+	margin-left: 60px;
+}
+
+#divLCB{
+	width:140px;
+	height:190px;
+	background-image: url(totsblank.png);
+	background-size: 120px 190px;
+	background-position:top;
+	background-repeat: no-repeat;
+	/*border:1px solid #aaaaaa;*/
+	float:left;
+	color:white;
+	text-align: center;
+	margin-left: 20px;
+}
+
+#divGK{
+	width:140px;
+	height:190px;
+	background-image: url(totsblank.png);
+	background-size: 120px 190px;
+	background-position:top;
+	background-repeat: no-repeat;
+	/*border:1px solid #aaaaaa;*/
+	float:left;
+	color:white;
+	text-align: center;
+	margin-left: 200px;
+
+}
+
+#drag1, #drag2, #drag3, #drag4, #drag5{
+	float:left;
+}
+
+img{
+	width: 140px;
+	height: 192px;
+}
+
+#team{
+	width: 650px;
+	height: 650px;
+	margin: -30px 675px 160px 675px;
+}
+
+#players{
+	width: 1000px;
+	height: 180px;
+	color: #FFFFFF;
+	font-size: 28px;
+	margin: 0 600px;
+}
+
+#players p{
+	margin-left: 200px;
+	margin-bottom: -2px;
+}
